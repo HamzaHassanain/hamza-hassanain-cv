@@ -24,6 +24,7 @@ jobs:
 
       - name: Build and enforce one page
         run: |
+          mkdir -p build
           tectonic -X compile resume.tex --outdir build
           PAGES=$(pdfinfo build/resume.pdf | awk '/^Pages/{print $2}')
           echo "Pages: $PAGES"
