@@ -1,0 +1,28 @@
+%====================
+% Header: Contact
+%====================
+
+\RequirePackage{fancyhdr}
+\fancypagestyle{fancy}{%
+\fancyhf{}
+\lhead{\phone \\ % PHONE
+        \city \\ % city
+	    \href{mailto:\email}{\email}} % EMAIL}
+	\chead{%
+	    \centering {\Huge \skills \name \hspace{1em} \vspace{.5em}} \\ % feel free to adjust vspace to 0
+	    {\color{highlight} \Large{\role}}}%
+	    \rhead{
+            \href{https://github.com/\github}{github.com/\github} \\% Github
+	    \href{https://gitlab.com/HamzaHassanain}{gitlab.com/HamzaHassanain} \\% GitLab
+	    \href{https://www.linkedin.com/in/hamza-hassanain-ha067/}{linkedin.com/in/\LinkedIn} \\% LinkedIn
+	    \href{https://dev.to/hamzahassanain0}{dev.to/hamzahassanain0}} % Dev.to
+\renewcommand{\headrulewidth}{1pt}% 2pt header rule
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{highlight}\leaders\hrule height \headrulewidth\hfill}}
+}
+% Every page other than the first has NO header (requirement: header on page 1 only)
+\fancypagestyle{noheader}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}}
+\pagestyle{noheader}
+
+\setlength{\headheight}{90pt}
+\setlength{\headsep}{5pt}
