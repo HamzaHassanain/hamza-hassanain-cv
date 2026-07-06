@@ -4,7 +4,7 @@
 
 \vspace{3mm}
 
-\textit{A competitive-programming platform pairing scalable automated judging infrastructure and contest tooling with AI-assisted problem authoring.}
+\textit{A competitive-programming platform: distributed judging, real-time contest tooling, and AI-assisted problem authoring.}
 
 \vspace{-2mm}
 
@@ -12,18 +12,20 @@
 
 \setlength{\itemsep}{1pt}
 
-  \item Architected the judge infrastructure (\texttt{judge1} on \textbf{Judge0}) for sandboxed, multi-language auto-grading at contest scale. %
+  \item Led end-to-end design of the distributed judge (\texttt{judge1} on \textbf{Judge0}) for sandboxed, multi-language auto-grading. %
 
-  \item Scaled concurrent execution \textbf{10x (50 to 500+ processes)} with an async, containerized job-orchestration pipeline. %
+  \item Extended submission capacity \textbf{10x (50 to 500+ concurrent)} via a distributed, asynchronous execution pipeline. %
 
-  \item Cut cloud infrastructure cost \textbf{95\% (\$600 to \$25/mo)} by migrating serverless workloads to a Docker/Nginx/Redis stack. %
+  \item Cut core infrastructure cost \textbf{95\%} by migrating resource-heavy tasks from serverless to a Docker/Nginx/Redis stack. %
 
-  \item Sandboxed \textbf{20+ languages} with resource- and syscall-limited Judge0 Docker images for secure multi-tenant contests. %
+  \item Isolated \textbf{20+ languages} in resource-limited Docker images; redesigned the DB layer for \textbf{50MB+} contest test cases. %
 
-  \item Built a real-time collaborative code workspace using \textbf{WebSockets} and \textbf{Yjs CRDTs} over a Monaco editor. %
+  \item Built a real-time collaborative dev space using \textbf{WebSockets} and \textbf{Yjs CRDTs} over a Monaco live-syncing editor. %
 
-  \item Co-built \textbf{Build v2}, an AI problem-authoring IDE with a 28-tool agent pipeline guarded by server-side execution locks. %
+  \item Co-founded \textbf{Build v2}, an AI problem-authoring IDE: 28-tool agent pipeline with execution locks and atomic cancellation. %
 
-  \item Tech: TypeScript, Next.js, AWS, Docker, Redis, MongoDB, Nginx, Yjs. %
+  \item Sustained 10-minute streaming agent sessions, scaled server capacity \textbf{10x} for test runs, and mentored junior engineers. %
+
+  \item Tech: TypeScript, Next.js, AWS, Docker, Nginx, Redis, MongoDB, Yjs. %
 
 \end{zitemize}
