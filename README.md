@@ -6,17 +6,30 @@ Cloud & Full-Stack Engineer · AWS Certified Solutions Architect – Associate �
 
 ## Build
 
-The document builds with any modern TeX engine.
+One command builds the source and updates the committed PDF, enforcing the 1-page rule:
 
 ```bash
-# Option A — tectonic (self-contained, recommended)
-tectonic -X compile resume.tex
-
-# Option B — TeX Live
-pdflatex resume.tex && pdflatex resume.tex   # run twice for the header/links
+sh ./build.sh            # -> Hamza_Mohammed_Hassanain_CV.pdf  (fails if not exactly 1 page)
 ```
 
-Output: `resume.pdf`.
+`build.sh` uses `tectonic` if it's on your `PATH`, otherwise it bootstraps a local copy into
+`./.tools/` (git-ignored). `pdflatex` is used as a fallback if present.
+
+### Auto-build before every commit
+
+A pre-commit hook rebuilds the PDF and stages it whenever you change any `.tex`/`.sty`, so the
+committed PDF is never stale. Enable it once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+If the CV ever compiles to more than one page, the hook aborts the commit.
+
+### CI
+
+[`.github/workflows/build-cv.yml`](.github/workflows/build-cv.yml) builds the CV on every push,
+fails the run if it is not exactly one page, and uploads the PDF as a downloadable artifact.
 
 ## Layout
 

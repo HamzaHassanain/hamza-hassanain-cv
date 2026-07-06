@@ -1,3 +1,6 @@
+# local toolchain bootstrapped by build.sh
+.tools/
+
 # LaTeX build artifacts
 *.aux
 *.log

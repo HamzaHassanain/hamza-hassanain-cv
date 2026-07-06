@@ -1,0 +1,40 @@
+name: Build CV
+
+on:
+  push:
+    paths:
+      - "**/*.tex"
+      - "**/*.sty"
+      - ".github/workflows/build-cv.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          echo "$PWD" >> "$GITHUB_PATH"
+
+      - name: Install pdfinfo (poppler)
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Build and enforce one page
+        run: |
+          tectonic -X compile resume.tex --outdir build
+          PAGES=$(pdfinfo build/resume.pdf | awk '/^Pages/{print $2}')
+          echo "Pages: $PAGES"
+          if [ "$PAGES" != "1" ]; then
+            echo "::error::CV must be exactly 1 page (got $PAGES)"
+            exit 1
+          fi
+          cp build/resume.pdf Hamza_Mohammed_Hassanain_CV.pdf
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Hamza_Mohammed_Hassanain_CV
+          path: Hamza_Mohammed_Hassanain_CV.pdf

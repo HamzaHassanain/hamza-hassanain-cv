@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# Rebuild the CV PDF whenever LaTeX source is staged, and add it to the commit.
+# Enable once with:  git config core.hooksPath .githooks
+set -eu
+
+changed=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(tex|sty)$' || true)
+[ -z "$changed" ] && exit 0
+
+echo "pre-commit: LaTeX source changed — rebuilding CV..."
+if ! sh ./build.sh; then
+  echo "pre-commit: build failed (or CV is not 1 page) — aborting commit." >&2
+  exit 1
+fi
+git add Hamza_Mohammed_Hassanain_CV.pdf
+echo "pre-commit: CV rebuilt and staged."
