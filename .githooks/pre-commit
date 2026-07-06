@@ -12,4 +12,5 @@ if ! sh ./build.sh; then
   exit 1
 fi
 git add Hamza_Mohammed_Hassanain_CV.pdf
-echo "pre-commit: CV rebuilt and staged."
+[ -f preview.png ] && git add preview.png
+echo "pre-commit: CV (and preview) rebuilt and staged."

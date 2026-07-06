@@ -1,0 +1,3 @@
+# Treat compiled assets as binary so git/GitHub never text-normalize or diff them
+*.pdf binary
+*.png binary

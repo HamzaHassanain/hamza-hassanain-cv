@@ -44,4 +44,10 @@ else
 fi
 
 cp build/resume.pdf "$OUT"
+
+# best-effort: refresh the README preview image if pdftoppm (poppler) is available
+if command -v pdftoppm >/dev/null 2>&1; then
+  pdftoppm -png -r 150 -singlefile build/resume.pdf preview >/dev/null 2>&1 && echo "Updated preview.png"
+fi
+
 echo "Built and updated $OUT"

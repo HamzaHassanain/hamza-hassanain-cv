@@ -1,8 +1,10 @@
 # Hamza Mohammed Hassanain — CV
 
-LaTeX source for my résumé. **[📄 Download the compiled PDF](./Hamza_Mohammed_Hassanain_CV.pdf)**
+Software Engineer · AWS Certified Solutions Architect – Associate · 2× ACPC Finalist.
 
-Cloud & Full-Stack Engineer · AWS Certified Solutions Architect – Associate · 2× ACPC Finalist.
+**[📄 Download the PDF](./Hamza_Mohammed_Hassanain_CV.pdf)** &nbsp;·&nbsp; preview below (GitHub's inline PDF viewer is occasionally flaky — the image and the download link always work).
+
+![CV preview](./preview.png)
 
 ## Build
 
