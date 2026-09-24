@@ -36,17 +36,16 @@ fails the run if it is not exactly one page, and uploads the PDF as a downloadab
 ## Layout
 
 ```
-resume.tex          main file — contact macros, section order
-_header.tex         first-page header (contact + links)
-TLCresume.sty       styling (fonts, spacing, section rules)
+resume.tex          main file — header (name + contact line), section order
+cvstyle.sty         styling (Jake's Resume layout: headings, bullets, spacing)
 sections/           one file per section
-  education.tex     degree + AWS certification
-  experience.tex    Repovive — Backend & Infrastructure Engineer
-  open-source.tex   merged contributions: GitLab, LLVM/Clang, Swift NIO
-  projects.tex      AWS reference architecture, SigmaLoop, Polyman, C++ systems
-  blogs.tex         technical writing
-  achivements.tex   ICPC ECPC / ACPC
-  skills.tex        cloud, backend, languages
+  summary.tex       three-line summary (Repovive, AWS, ACPC, open source, dev.to)
+  education.tex     degree, SigmaLoop graduation project, coursework
+  experience.tex    Repovive — Founding Software Engineer
+  open-source.tex   GitLab and LLVM, grouped by project, MR/PR links on the right
+  achievements.tex  AWS certification, ICPC ACPC, problem authoring
+  projects.tex      Polyman CLI, CP Judge AWS reference architecture
+  skills.tex        languages, frameworks, cloud & tools, concepts
 ```
 
 ## House rules (keep these when editing)
@@ -54,12 +53,12 @@ sections/           one file per section
 These constraints keep the CV tight and credible — preserve them in any future edit:
 
 1. **One page.** Everything must fit on a single letter page. Verify page count after every change.
-2. **Small but readable fonts.** Base is `10pt` (`sourcesanspro`). Maximise information density, but never below readable size.
+2. **Small but readable fonts.** Base is `10pt` (Computer Modern). Maximise information density, but never below readable size.
 3. **No wasted horizontal space.** Write each line to run close to the full text width — no short, half-empty lines.
 4. **Each bullet is at most one line.** If a bullet wraps, shorten it (drop a link or a few words), don't let it spill.
-5. **Header on the first page only.** Page 1 uses `\thispagestyle{fancy}`; later pages use the `noheader` style.
+5. **Match the reference layout.** Follow Jake's Resume style: small-caps section rules, bold heading with dates on the right, links on the right of each bullet.
 6. **Every claim must survive a click.** Describe merged PRs/MRs by what the diff actually does; link them. No inflated framing.
 
 ## License
 
-See [`LICENSE.txt`](./LICENSE.txt). Résumé content © Hamza Mohammed Hassanain; template by Timmy Chan (TLCresume).
+See [`LICENSE.txt`](./LICENSE.txt). Résumé content © Hamza Mohammed Hassanain; layout based on Jake's Resume (Jake Gutierrez, MIT).

@@ -1,15 +1,27 @@
-\vspace{1mm}
-\begin{zitemize}
-\setlength{\itemsep}{1pt}
+\resumeSubHeadingListStart
 
-  \item \textbf{GitLab Go SDK (client-go):} typed group integrations -- Slack, Jira, MS Teams, Mattermost, Harbor, +3 | \href{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2692}{\textbf{!2692}}, \href{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2691}{\textbf{!2691}}, \href{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2675}{\textbf{!2675}}, \href{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2670}{\textbf{!2670}}. %
+  \resumeSubheading
+    {GitLab}{Nov 2025 -- Jan 2026}
+    {Open Source Contributor}{\ulink{https://gitlab.com/HamzaHassanain}{MRs}}
+    \resumeItemListStart
+      \resumeRefItem{Added typed group integrations to the Go SDK: Slack, Jira, MS Teams, Mattermost, Harbor, +3}
+        {\ulink{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2692}{!2692}, \ulink{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2675}{!2675}, \ulink{https://gitlab.com/gitlab-org/api/client-go/-/merge_requests/2670}{!2670}}
+      \resumeRefItem{Added Harbor and Mattermost integration resources to the Terraform provider, plus a group SAML attribute}
+        {\ulink{https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2881}{!2881}, \ulink{https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2909}{!2909}}
+      \resumeRefItem{Hardened \texttt{Json.safe\_parse} and fixed Vue lint issues in the main GitLab codebase}
+        {\ulink{https://gitlab.com/gitlab-org/gitlab/-/merge_requests/221163}{!221163}, \ulink{https://gitlab.com/gitlab-org/gitlab/-/merge_requests/221158}{!221158}}
+    \resumeItemListEnd
 
-  \item \textbf{GitLab Terraform provider:} new Harbor \& Mattermost integration resources + group SAML attribute | \href{https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2881}{\textbf{!2881}}, \href{https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2909}{\textbf{!2909}}, \href{https://gitlab.com/gitlab-org/terraform-provider-gitlab/-/merge_requests/2852}{\textbf{!2852}}. %
+  \resumeSubheading
+    {LLVM}{Nov 2025 -- Feb 2026}
+    {Compiler Contributor}{\ulink{https://github.com/llvm/llvm-project/pulls?q=author\%3AHamzaHassanain}{PRs}}
+    \resumeItemListStart
+      \resumeRefItem{Added constexpr evaluation of the X86 \texttt{cvtpd2ps} intrinsics in Clang}
+        {\ulink{https://github.com/llvm/llvm-project/pull/169980}{\#169980}}
+      \resumeRefItem{Lowered AArch64 and ARM CLS to \texttt{ISD::CTLS}, replacing a manual expansion}
+        {\ulink{https://github.com/llvm/llvm-project/pull/178885}{\#178885}, \ulink{https://github.com/llvm/llvm-project/pull/178430}{\#178430}}
+      \resumeRefItem{Added LLDB SWIG Python extension tests for \texttt{SBTarget}}
+        {\ulink{https://github.com/llvm/llvm-project/pull/173473}{\#173473}}
+    \resumeItemListEnd
 
-  \item \textbf{GitLab monorepo:} \texttt{Json.safe\_parse} hardening and Vue lint compliance | \href{https://gitlab.com/gitlab-org/gitlab/-/merge_requests/221163}{\textbf{!221163}}, \href{https://gitlab.com/gitlab-org/gitlab/-/merge_requests/221158}{\textbf{!221158}}. %
-
-  \item \textbf{LLVM / Clang:} constexpr X86 \texttt{cvtpd2ps}, AArch64/ARM CLS $\rightarrow$ \texttt{ISD::CTLS}, LLDB SWIG tests | \href{https://github.com/llvm/llvm-project/pull/169980}{\textbf{\#169980}}, \href{https://github.com/llvm/llvm-project/pull/178885}{\textbf{\#178885}}, \href{https://github.com/llvm/llvm-project/pull/178430}{\textbf{\#178430}}, \href{https://github.com/llvm/llvm-project/pull/173473}{\textbf{\#173473}}. %
-
-  \item \textbf{Apple Swift NIO:} idempotent \texttt{NIOFileSystem} directory creation | \href{https://github.com/apple/swift-nio/pull/3410}{\textbf{\#3410}}. %
-
-\end{zitemize}
+\resumeSubHeadingListEnd
